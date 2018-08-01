@@ -15,14 +15,14 @@ module "dcos-tested-gcp-oses" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| os |  | string | - | yes |
+| os | OS name_version | string | - | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| gcp_image_family |  |
-| gcp_image_name |  |
+| gcp_image_family | GCP Image Family Name |
+| gcp_image_name | GCP Image Name |
 | os-setup | Main Output |
 | user | Output |
 
