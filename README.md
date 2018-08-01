@@ -28,3 +28,7 @@ module "dcos-tested-gcp-oses" {
 | gcp_image_name |  |
 | os-setup | Main Output |
 | user | Output |
+
+## Roadmaps
+
+ - [ ] Add DC/OS version support pre-req instructions
