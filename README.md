@@ -15,10 +15,7 @@ module "dcos-tested-gcp-oses" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| gcp_os_image_version | GCP Images | map | `<map>` | no |
 | os |  | string | - | yes |
-| provider |  | string | `gcp` | no |
-| traditional_default_os_user | Standard Default OS Users | map | `<map>` | no |
 
 ## Outputs
 
