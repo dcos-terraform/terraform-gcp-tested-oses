@@ -1,5 +1,5 @@
 variable "provider" {
- default = "gcp"
+  default = "gcp"
 }
 
 # OS name_version
