@@ -2,7 +2,7 @@
 #
 
 data "template_file" "traditional_os_user" {
-  count    = "${var.enabled == "true" ? 1 : 0 }"
+#  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${aws_user_result}"
 
   vars {
@@ -11,7 +11,7 @@ data "template_file" "traditional_os_user" {
 }
 
 data "template_file" "gcp_image_family" {
-  count    = "${var.enabled == "true" ? 1 : 0 }"
+#  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${result}"
 
   vars {
@@ -20,7 +20,7 @@ data "template_file" "gcp_image_family" {
 }
 
 data "template_file" "gcp_image_name" {
-  count    = "${var.enabled == "true" ? 1 : 0 }"
+#  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${result}"
 
   vars {
