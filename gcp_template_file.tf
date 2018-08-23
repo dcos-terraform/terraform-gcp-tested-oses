@@ -2,7 +2,7 @@
 #
 
 data "template_file" "traditional_os_user" {
-#  count    = "${var.enabled == "true" ? 1 : 0 }"
+  #  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${aws_user_result}"
 
   vars {
@@ -10,20 +10,20 @@ data "template_file" "traditional_os_user" {
   }
 }
 
-data "template_file" "gcp_image_family" {
-#  count    = "${var.enabled == "true" ? 1 : 0 }"
+data "template_file" "image_family" {
+  #  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${result}"
 
   vars {
-    result = "${element(var.gcp_os_image_version[var.os], 0)}"
+    result = "${element(var.os_image_version[var.os], 0)}"
   }
 }
 
-data "template_file" "gcp_image_name" {
-#  count    = "${var.enabled == "true" ? 1 : 0 }"
+data "template_file" "image_name" {
+  #  count    = "${var.enabled == "true" ? 1 : 0 }"
   template = "$${result}"
 
   vars {
-    result = "${element(var.gcp_os_image_version[var.os], 1)}"
+    result = "${element(var.os_image_version[var.os], 1)}"
   }
 }

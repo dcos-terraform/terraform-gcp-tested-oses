@@ -11,7 +11,7 @@ variable "traditional_default_os_user" {
 }
 
 # GCP Images
-variable "gcp_os_image_version" {
+variable "os_image_version" {
   type = "map"
 
   # GCP Image Schema # image family   /   image name

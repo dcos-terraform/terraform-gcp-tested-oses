@@ -4,11 +4,11 @@ output "user" {
 }
 
 # GCP Image Family Name
-output "gcp_image_family" {
-  value = "${data.template_file.gcp_image_family.rendered}"
+output "image_family" {
+  value = "${data.template_file.image_family.rendered}"
 }
 
 # GCP Image Name
-output "gcp_image_name" {
-  value = "${data.template_file.gcp_image_name.rendered}"
+output "image_name" {
+  value = "${data.template_file.image_name.rendered}"
 }
