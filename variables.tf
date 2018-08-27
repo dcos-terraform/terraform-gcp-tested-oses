@@ -25,3 +25,20 @@ variable "os_image_version" {
     ""                = ["", ""]
   }
 }
+
+variable "provider" {
+  default = "gcp"
+}
+
+# OS name_version
+variable "os" {}
+
+# Enable module
+variable "enabled" {
+  default = "false"
+}
+
+# DCOS Version prereqs
+variable "dcos_version" {
+  default = "1.7"
+}

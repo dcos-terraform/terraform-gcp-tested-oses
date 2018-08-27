@@ -27,3 +27,9 @@ data "template_file" "image_name" {
     result = "${element(var.os_image_version[var.os], 1)}"
   }
 }
+
+# Cloud Image Instruction
+data "template_file" "os-setup" {
+  #  count    = "${var.enabled == "true" ? 1 : 0 }"
+  template = "${file("${path.module}/platform/cloud/${var.provider}/${var.os}/setup.sh")}"
+}
