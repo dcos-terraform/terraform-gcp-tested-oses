@@ -1,7 +1,7 @@
 # Standard Default OS Users
 variable "traditional_default_os_user" {
   description = "traditional default os user"
-  type = "map"
+  type        = "map"
 
   default = {
     coreos = "core"
@@ -14,7 +14,7 @@ variable "traditional_default_os_user" {
 # GCP Images
 variable "os_image_version" {
   description = "os image version"
-  type = "map"
+  type        = "map"
 
   # GCP Image Schema # image family   /   image name
   #                                  V                  V
@@ -30,7 +30,7 @@ variable "os_image_version" {
 
 variable "provider" {
   description = "provider"
-  default = "gcp"
+  default     = "gcp"
 }
 
 # OS name_version
@@ -41,11 +41,11 @@ variable "os" {
 # Enable module
 variable "enabled" {
   description = "enabled"
-  default = "false"
+  default     = "false"
 }
 
 # DCOS Version prereqs
 variable "dcos_version" {
   description = "Specifies which DC/OS version instruction to use. Options: 1.9.0, 1.8.8, etc. See dcos_download_path or dcos_version tree for a full list."
-  default = "1.7"
+  default     = "1.7"
 }
