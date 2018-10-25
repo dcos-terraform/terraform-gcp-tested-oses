@@ -1,23 +1,23 @@
 # Output
 output "user" {
   description = "user"
-  value       = "${data.template_file.traditional_os_user.rendered}"
+  value       = "${local.user}"
 }
 
 # GCP Image Family Name
 output "image_family" {
   description = "image family"
-  value       = "${data.template_file.image_family.rendered}"
+  value       = "${local.image_family}"
 }
 
 # GCP Image Name
 output "image_name" {
   description = "image name"
-  value       = "${data.template_file.image_name.rendered}"
+  value       = "${local.image_name}"
 }
 
 # Main Output
 output "os-setup" {
   description = "os-setup"
-  value       = "${data.template_file.os-setup.rendered}"
+  value       = "${local.script}"
 }

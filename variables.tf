@@ -28,20 +28,10 @@ variable "os_image_version" {
   }
 }
 
-variable "provider" {
-  description = "provider"
-  default     = "gcp"
-}
-
 # OS name_version
 variable "os" {
   description = "Operating system to use"
-}
-
-# Enable module
-variable "enabled" {
-  description = "enabled"
-  default     = "false"
+  default     = "centos_7.3"
 }
 
 # DCOS Version prereqs

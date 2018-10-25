@@ -1,5 +1,3 @@
-#!/bin/sh
-
 sudo setenforce 0 && \
 sudo sed -i --follow-symlinks 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux
 sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
@@ -14,16 +12,14 @@ EOF
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
 [Service]
-Restart=always
-StartLimitInterval=0
-RestartSec=15
-ExecStartPre=-/sbin/ip link del docker0
 ExecStart=
-ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+ExecStart=/usr/bin/docker daemon --storage-driver=overlay
 EOF
-sudo yum install -y docker-engine-1.11.2
+sudo yum install -y docker-engine-1.13.1
 sudo systemctl start docker
 sudo systemctl enable docker
+sudo systemctl stop dnsmasq.service
+sudo systemctl disable dnsmasq.service
 sudo yum install -y bind-utils
 sudo yum install -y wget
 sudo yum install -y git
@@ -32,7 +28,9 @@ sudo yum install -y curl
 sudo yum install -y xz
 sudo yum install -y ipset
 sudo yum install -y ntp
+sudo yum remove -y dnsmasq
 sudo systemctl enable ntpd
 sudo systemctl start ntpd
 sudo getent group nogroup || sudo groupadd nogroup
+sudo getent group docker || sudo groupadd docker
 sudo touch /opt/dcos-prereqs.installed
