@@ -1,6 +1,6 @@
 # Standard Default OS Users
 variable "traditional_default_os_user" {
-  description = "traditional default os user"
+  description = "Standard Default OS Users"
   type        = "map"
 
   default = {
@@ -13,7 +13,7 @@ variable "traditional_default_os_user" {
 
 # GCP Images
 variable "os_image_version" {
-  description = "os image version"
+  description = "GCP Images"
   type        = "map"
 
   # GCP Image Schema # image family   /   image name
