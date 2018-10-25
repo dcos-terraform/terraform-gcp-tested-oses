@@ -7,8 +7,8 @@ This is a module that properly configures the DC/OS prerequisites for selected O
 
 ```hcl
 module "dcos-tested-gcp-oses" {
-   source   = "./modules/dcos-tested-gcp-oses"
-   os       = "${var.os}"
+   source   = "dcos-terraform/tested-oses/gcp"
+   os       = "centos_7.3"
 }
 ```
 
@@ -18,10 +18,8 @@ module "dcos-tested-gcp-oses" {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | dcos_version | Specifies which DC/OS version instruction to use. Options: 1.9.0, 1.8.8, etc. See dcos_download_path or dcos_version tree for a full list. | string | `1.7` | no |
-| enabled | enabled | string | `false` | no |
-| os | Operating system to use | string | - | yes |
+| os | Operating system to use | string | `centos_7.3` | no |
 | os_image_version | os image version | map | `<map>` | no |
-| provider | provider | string | `gcp` | no |
 | traditional_default_os_user | traditional default os user | map | `<map>` | no |
 
 ## Outputs

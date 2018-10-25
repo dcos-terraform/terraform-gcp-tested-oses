@@ -8,14 +8,11 @@
  *
  *```hcl
  * module "dcos-tested-gcp-oses" {
- *    source   = "./modules/dcos-tested-gcp-oses"
- *    os       = "${var.os}"
+ *    source   = "dcos-terraform/tested-oses/gcp"
+ *    os       = "centos_7.3"
  * }
  *```
  */
-
-## GCP Data Templates
-#
 
 locals {
   os_name    = "${element(split("_", var.os),0)}"
