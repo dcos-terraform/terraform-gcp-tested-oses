@@ -23,6 +23,7 @@ variable "os_image_version" {
     "centos_7.3"      = ["centos-cloud", "centos-7-v20170719"]
     "coreos_stable"   = ["coreos-cloud", "coreos-stable"]
     "coreos_1576.5.0" = ["coreos-cloud", "coreos-stable-1576-5-0-v20180105"]
+    "coreos_1855.5.0" = ["coreos-cloud", "coreos-stable-1855-5-0-v20181024"]
     "rhel_7.3"        = ["rhel-cloud", "rhel-7-v20170523"]
     ""                = ["", ""]
   }
@@ -31,7 +32,6 @@ variable "os_image_version" {
 # OS name_version
 variable "os" {
   description = "Operating system to use"
-  default     = "centos_7.3"
 }
 
 # DCOS Version prereqs
