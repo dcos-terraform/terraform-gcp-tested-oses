@@ -32,6 +32,7 @@ variable "os_image_version" {
 # OS name_version
 variable "os" {
   description = "Operating system to use"
+  default     = "centos_7.3"
 }
 
 # DCOS Version prereqs
