@@ -21,6 +21,7 @@ variable "os_image_version" {
   default = {
     "centos_7.2"      = ["centos-cloud", "centos-7-v20170523"]
     "centos_7.3"      = ["centos-cloud", "centos-7-v20170719"]
+    "centos_7.5"      = ["centos-cloud", "centos-7-v20181011"]
     "coreos_stable"   = ["coreos-cloud", "coreos-stable"]
     "coreos_1576.5.0" = ["coreos-cloud", "coreos-stable-1576-5-0-v20180105"]
     "coreos_1855.5.0" = ["coreos-cloud", "coreos-stable-1855-5-0-v20181024"]
