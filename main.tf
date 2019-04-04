@@ -9,7 +9,8 @@
  *```hcl
  * module "dcos-tested-gcp-oses" {
  *    source   = "dcos-terraform/tested-oses/gcp"
- *    os       = "centos_7.3"
+ *    version  = "~> 0.2.0"
+ *    os       = "centos_7.5"
  * }
  *```
  */
