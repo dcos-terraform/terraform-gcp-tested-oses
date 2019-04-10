@@ -46,6 +46,7 @@ sudo yum install -y xz
 sudo yum install -y ipset
 sudo yum install -y bind-utils
 sudo yum install -y ntp
+sudo yum install -y cloud-init
 sudo yum remove -y yum-cron
 sudo systemctl enable ntpd
 sudo systemctl start ntpd
