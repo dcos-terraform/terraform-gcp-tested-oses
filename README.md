@@ -12,22 +12,21 @@ module "dcos-tested-gcp-oses" {
 }
 ```
 
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| dcos_version | Specifies which DC/OS version instruction to use. Options: 1.9.0, 1.8.8, etc. See dcos_download_path or dcos_version tree for a full list. | string | `1.7` | no |
-| os | Operating system to use | string | `centos_7.3` | no |
-| os_image_version | GCP Images | map | `<map>` | no |
-| traditional_default_os_user | Standard Default OS Users | map | `<map>` | no |
+| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.12.3, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list. | string | `"1.7"` | no |
+| os | Operating system to use | string | `"centos_7.3"` | no |
+| os\_image\_version | GCP Images | map | `<map>` | no |
+| traditional\_default\_os\_user | Standard Default OS Users | map | `<map>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| image_family | GCP Image Family Name |
-| image_name | GCP Image Name |
+| image\_family | GCP Image Family Name |
+| image\_name | GCP Image Name |
 | os-setup | os-setup |
-| user | Output |
+| user | User |
 
