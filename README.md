@@ -30,4 +30,3 @@ module "dcos-tested-gcp-oses" {
 | image\_name | GCP Image Name |
 | os-setup | os-setup |
 | user | User |
-
