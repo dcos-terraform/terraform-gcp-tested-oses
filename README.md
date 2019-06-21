@@ -17,7 +17,6 @@ module "dcos-tested-gcp-oses" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.12.3, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list. | string | `"1.12.3"` | no |
 | os | Operating system to use | string | `"centos_7.5"` | no |
 | os\_image\_version | GCP Images | map | `<map>` | no |
 | traditional\_default\_os\_user | Standard Default OS Users | map | `<map>` | no |
@@ -30,3 +29,4 @@ module "dcos-tested-gcp-oses" {
 | image\_name | GCP Image Name |
 | os-setup | os-setup |
 | user | User |
+
